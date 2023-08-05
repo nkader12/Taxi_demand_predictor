@@ -1,4 +1,4 @@
-name: Feature Pipeline Workflow
+name: Feature-Pipeline-Workflow
 
 on:
   schedule:
