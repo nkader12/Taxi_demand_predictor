@@ -1,4 +1,4 @@
-name: Feature-Pipeline-Workflow
+name: feature-pipeline
 
 on:
   schedule:
@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  PYTHON_VERSION: 3.10
-  POETRY_VERSION: 1.5.1
+  PYTHON_VERSION: 3.9
+  POETRY_VERSION: 1.4.2
   POETRY_URL: https://install.python-poetry.org
 
 jobs:
@@ -50,5 +50,5 @@ jobs:
     - name: Run feature generation script
       env: 
         HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
-        run: |
-            poetry run jupyter --to --execute notebooks/feature_pipeline.ipynb  
+      run: make features
+  
