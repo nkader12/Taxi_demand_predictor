@@ -50,4 +50,4 @@ jobs:
     - name: Run feature generation script
       env: 
         HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
-      run: make features
+      run: poetry run jupyter  --to --execute notebooks/feature_pipeline.ipynb
